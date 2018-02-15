@@ -11,18 +11,21 @@
 </head>
 <body ng-app="app">
     <div ng-controller="FormController as form">
-        <h1>ToDo List</h1>
-        <p>A place to store the things you have to do!</p>
-        <form ng-submit="form.addItem(form.item)">
-        <input type="text" placeholder="Filter your to-dos" ng-model="todoFilter">
+        <!-- <h1>ToDo List</h1>
+        <p>form ng-submit="form.addItem(form.item)">
+         place to store the things you have to do!</p> -->
+        
+            <task-list>></task-list>
+            <task-form></task-form>
+        <!-- <input type="text" placeholder="Filter your to-dos" ng-model="todoFilter">
         <ol>
            <li ng-repeat="item in form.todoList | filter: todoFilter track by $index"> {{item}} 
             <i class="material-icons" ng-click="form.remove(form.index)">close</i>
            </li>
         </ol>
         <input id="addToDo" type="text" placeholder="Add your to-do" ng-model="form.item"><br>
-        <button type="submit">Add</button>
-        </form>
+        <button type="submit">Add</button> -->
+        <!-- </form>  -->
     </div>
                 
     
@@ -30,6 +33,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="app.js"></script>
-    <script src="controller.js"></script>
+    <script src="controllers/controller.js"></script>
+    <script src="components/taskForm.js"></script>
+    <script src="components/taskList.js"></script>
 </body>
 </html>
